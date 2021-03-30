@@ -1,0 +1,86 @@
+.banner{
+	overflow: hidden;
+	height: 450px;
+	position: relative;
+	width: 100%;
+}
+
+/* Outer Container */
+.smoothslides, .smoothslides-on {
+	position:relative;
+	font-size:0;
+	line-height: 0;
+	height: 100%;
+	border-radius: 6px;
+}
+/* Outer Container Background (visible while loading) */
+.smoothslides {
+	background:rgba(255,255,255,.5);
+}
+
+#banner img{
+	height: 450px;
+	width: auto !important;
+	max-width: none;
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+}
+
+/* wrapper around each slide */
+.ss-slide {
+	position: absolute;
+	top:0;
+	left:0;
+	transform-origin:center;
+	display: block;
+	width:100%;
+	zoom: 1;
+}
+
+/* Hide images until loaded */
+.smoothslides img {
+    display:none;
+}
+
+/* Pagination wrapper. Used for centering */
+.ss-paginate-wrap {
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+    z-index: 25;
+}
+
+.ss-paginate {
+    display: inline-block;
+    line-height: 0;
+}
+
+/* Pagination dots */
+.ss-paginate a:link, .ss-paginate a:visited {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background: #001f32;
+    transition: .3s;
+    -webkit-box-shadow: 0 1px 1px 0 rgba(255,255,255,100);
+    box-shadow: 0 1px 1px 0 rgba(255,255,255,100);
+}
+
+.ss-paginate a:hover {
+    background: #30a5b5;
+}
+
+.ss-paginate a.ss-paginate-current {
+    background: #30a5b5;
+}
+
+/* changes for smaller screens */
+@media (max-width: 600px) {
+	.smoothslides-on, .ss-slide-stage {
+		border-radius:0;
+	}
+}

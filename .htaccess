@@ -1,0 +1,8 @@
+#Force www
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^jurisjewelclosingthedistance.com [NC]
+RewriteRule ^(.*)$ http://www.jurisjewelclosingthedistance.com/$1 [L,R=301,NC]
+
+#Error Page
+ErrorDocument 404 http://www.jurisjewelclosingthedistance.com/404error.php
+

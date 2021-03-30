@@ -1,0 +1,5 @@
+#Password Protect Admin Folder
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /srv/disk2/2758762/www/jurisjewel/.htpasswd
+require valid-user
